@@ -1,0 +1,66 @@
+function calculadora () {
+const operacao = prompt('Escolha a operação:\n 1- Som (+)\n 2- Sub (-)\n 3- Div (/)\n 4- Mul (*)\n 5- Divi (%)\n 6- Pot (**)\n')
+
+    let n1 = Number(prompt('Insira o Primeiro Valor: '))
+    let n2 = Number(prompt('insira o Segundo Valor: '))
+    let resultado;
+
+    function Som() {
+        resultado = n1 + n2
+        alert(`${n1} + ${n2} = ${resultado}`)
+        NovaOperação();
+    }
+    function Sub() {
+        resultado = n1 - n2
+        alert(`${n1} - ${n2} = ${resultado}`)
+        NovaOperação();
+    }
+    function Som() {
+        resultado = n1 + n2
+        alert(`${n1} + ${n2} = ${resultado}`)
+        NovaOperação();
+    }
+    function Div() {
+        resultado = n1 / n2
+        alert(`${n1} / ${n2} = ${resultado}`)
+        NovaOperação();
+    }
+    function Divi() {
+        resultado = n1 % n2
+        alert(`${n1} % ${n2} = ${resultado}`)
+        NovaOperação();
+    }
+    function Pot() {
+        resultado = n1 ** n2
+        alert(`${n1} ** ${n2} = ${resultado}`)
+        NovaOperação();
+    }
+
+    function NovaOperação(){
+        let opcao = prompt('Deseja fazer outra operação?\n 1- Sim\n 2- Não')
+        if (opcao == 1){
+            calculadora();
+        } else if (opcao == 2){
+            alert('Obrigado por usar nossa calculadora.')
+        } else {
+            alert('Digite uma opção válida!')
+            NovaOperação();
+        }
+    }
+    if (operacao == 1) {
+        Som();
+    } else if (operacao == 2) {
+        Sub();       
+    } else if (operacao == 3) {
+        Div();
+    } else if (operacao == 4) {
+        Mul();
+    } else if (operacao == 5) {
+        Divi();
+    } else if (operacao == 6) {
+        Pot();
+    }
+    
+}
+
+calculadora();
